@@ -8,7 +8,12 @@
 | Карелашвили Т.И. | техлид + разработчик | 56      | techlid.h, techlid.cpp | 1-3         |
 | Карелашвили Т.И. | разработчик          | 63      | dev.h, dev.cpp         | 4-5         |
 
+## Функции
+
+- **techlid.cpp** — модуль числа, знак числа, ограничение в диапазоне.
+- **dev.cpp** — перевод километров в мили и обратно.
+
 ## Сборка и запуск
 
-g++ main.cpp techlid.cpp dev.cpp -o app
-./app# team-project
+cl /nologo /EHsc main.cpp techlid.cpp dev.cpp
+main.exe
