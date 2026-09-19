@@ -3,7 +3,7 @@
 #include <iostream>
 // === БЛОК ПОДКЛЮЧЕНИЙ: каждый участник добавляет свой заголовочный файл ===
 #include "techlid.h"
-// #include "dev.h"
+#include "dev.h"
 // === КОНЕЦ БЛОКА ПОДКЛЮЧЕНИЙ ===
 using namespace std;
 
@@ -12,10 +12,12 @@ int main() {
     do {
         cout << "\n=== Командный проект: сборник расчётов ===\n";
         // === БЛОК МЕНЮ: каждый участник добавляет свои пункты ===
-        // === КОНЕЦ БЛОКА МЕНЮ(dev) ===
+        // === КОНЕЦ БЛОКА МЕНЮ(techlid) ===
         cout << "1. Модуль числа\n";
         cout << "2. Знак числа\n";
-        cout << "3. Ограничение диапазона (clamp)\n";
+        cout << "3. Ограничение в диапазоне\n";
+        cout << "4. Километры в мили\n";
+        cout << "5. Мили в километры\n";
         cout << "0. Выход\n";
         cout << "Выберите пункт: ";
         cin >> choice;
@@ -45,6 +47,20 @@ int main() {
             break;
             }
             cout << "clamp(x) = " << clamp(x, lo, hi) << "\n";
+            break;
+        }
+        case 4: {
+            double km;
+            cout << "Введите километры: ";
+            cin >> km;
+            cout << km << " км = " << kmToMiles(km) << " миль\n";
+            break;
+        }
+        case 5: {
+            double mi;
+            cout << "Введите мили: ";
+            cin >> mi;
+            cout << mi << " миль = " << milesToKm(mi) << " км\n";
             break;
         }
         case 0:
